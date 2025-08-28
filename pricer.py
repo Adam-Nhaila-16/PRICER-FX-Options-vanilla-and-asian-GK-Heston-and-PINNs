@@ -10,7 +10,6 @@ import math
 
 #  modules internes (ton repo)
 from fx_data import get_historical_vol, get_eurusd_history
-from inter_rates import plot_curves
 from methods import (
     FXOption,
     AsianOption,
@@ -227,10 +226,10 @@ if model.startswith("GK"):
 else:
     vol = None  # non utilisé directement par Heston / PINN (hors champs dédiés ci-dessus)
 
-# 3) Courbes de taux (visuel)
-st.subheader("EUR & USD – Taux d'interêt")
-fig = plot_curves()
-st.plotly_chart(fig, use_container_width=True)
+# # 3) Courbes de taux (visuel)
+# st.subheader("EUR & USD – Taux d'interêt")
+# fig = plot_curves()
+# st.plotly_chart(fig, use_container_width=True)
 
 # 4) Récapitulatif des paramètres
 st.write("### Paramètres choisis")
